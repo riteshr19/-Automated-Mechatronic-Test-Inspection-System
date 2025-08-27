@@ -93,41 +93,172 @@ python3 equipment_controller.py --port /dev/ttyUSB0 --status
 
 ## Operating Procedures
 
+![System Architecture](../images/architecture/system_architecture.png)
+
 ### Daily Startup Procedure
 
-1. **Pre-operational Checks**
-   - [ ] Verify cleanroom environment is stable
-   - [ ] Check equipment for physical damage
+#### Step 1: Pre-operational Checks
+![Pre-operational Checklist](../images/cli/cli_help_status.png)
+
+1. **Environmental Verification**
+   - [ ] Verify cleanroom environment is stable (temperature, humidity, particle count)
+   - [ ] Check that all personnel are properly suited for cleanroom entry
+   - [ ] Ensure cleanroom lighting and airflow systems are operational
+
+2. **Physical Equipment Inspection**
+   - [ ] Check equipment for physical damage or wear
    - [ ] Ensure test fixtures are clean and properly positioned
-   - [ ] Verify emergency stop systems are functional
+   - [ ] Verify all cable connections are secure
+   - [ ] Check emergency stop systems are functional
 
-2. **System Initialization**
-   - [ ] Power up equipment in proper sequence
-   - [ ] Initialize software systems
-   - [ ] Run system self-test
-   - [ ] Perform daily calibration
+3. **Safety Systems Verification**
+   - [ ] Test emergency stop button functionality
+   - [ ] Verify safety interlocks are active
+   - [ ] Check that fire suppression systems are armed
+   - [ ] Ensure first aid equipment is accessible
 
-3. **Test Setup**
-   - [ ] Load test program for current product
-   - [ ] Verify test parameters are correct
-   - [ ] Position devices under test (DUT)
-   - [ ] Confirm safety interlocks are active
+#### Step 2: System Initialization
+
+**Power-Up Sequence:**
+```bash
+# 1. Start the main system
+mechatronic_test_system --status
+```
+
+1. **Equipment Power-Up**
+   - [ ] Power up equipment in proper sequence (UPS → Main power → Peripherals)
+   - [ ] Wait for equipment to complete self-diagnostics (typically 2-3 minutes)
+   - [ ] Verify all status LEDs show green/ready state
+
+2. **Software System Initialization**
+   - [ ] Launch the control software
+   - [ ] Initialize hardware interfaces
+   - [ ] Load current configuration settings
+   - [ ] Verify communication with all connected devices
+
+```bash
+# 2. Run system self-test
+mechatronic_test_system --calibrate
+```
+
+3. **System Self-Test**
+   - [ ] Execute automated self-test sequence
+   - [ ] Review test results for any anomalies
+   - [ ] Document any warnings or errors in system log
+   - [ ] Resolve any issues before proceeding to production testing
+
+#### Step 3: Daily Calibration
+
+![Calibration Process](../images/testing/testing_framework.png)
+
+**Calibration Sequence:**
+```bash
+# Perform daily calibration
+mechatronic_test_system --calibrate
+```
+
+1. **Sensor Calibration**
+   - [ ] Calibrate temperature sensors using reference standards
+   - [ ] Verify pressure sensors against known references
+   - [ ] Check measurement repeatability (5 consecutive readings within ±0.1%)
+
+2. **Actuator Calibration**
+   - [ ] Verify actuator positioning accuracy
+   - [ ] Test response times meet specifications
+   - [ ] Check for any mechanical wear or backlash
+
+3. **Communication Verification**
+   - [ ] Test all communication interfaces (Serial, USB, Ethernet)
+   - [ ] Verify data integrity and timing
+   - [ ] Check for any packet loss or communication errors
+
+#### Step 4: Test Setup
+
+**Program Loading:**
+```bash
+# Load test program for specific device
+mechatronic_test_system --test DEVICE_TYPE_001
+```
+
+1. **Test Program Configuration**
+   - [ ] Load test program for current product batch
+   - [ ] Verify test parameters match product specifications
+   - [ ] Review test sequence and expected results
+   - [ ] Confirm test limits and tolerances are correct
+
+2. **Device Under Test (DUT) Setup**
+   - [ ] Position devices under test in proper orientation
+   - [ ] Ensure proper electrical connections
+   - [ ] Verify mechanical alignment and fixturing
+   - [ ] Double-check DUT identification and traceability
+
+3. **Final Safety Confirmation**
+   - [ ] Confirm all safety interlocks are active
+   - [ ] Verify emergency stop accessibility
+   - [ ] Ensure proper PPE is worn by all operators
+   - [ ] Review emergency procedures with all personnel
 
 ### Running Tests
 
-#### Single Device Test
-1. Place device in test fixture
-2. Select appropriate test program
-3. Click "Start Test" or run command:
-   ```bash
-   ./mechatronic_test_system --test DEVICE_001
-   ```
-4. Monitor test progress
-5. Review results and documentation
+![Test Execution Output](../images/testing/test_execution_output.png)
 
-#### Batch Testing
-1. Load multiple devices into fixtures
-2. Select batch test program
+#### Standard Test Execution
+
+1. **Pre-Test Verification**
+   ```bash
+   # Check system status before testing
+   mechatronic_test_system --status
+   ```
+   
+   - [ ] Verify system is in READY state
+   - [ ] Confirm all diagnostics are GREEN
+   - [ ] Check that DUT is properly positioned
+   - [ ] Review test parameters one final time
+
+2. **Test Execution Process**
+   
+   **Single Device Test:**
+   ```bash
+   # Run test on specific device
+   mechatronic_test_system --test DEVICE_001
+   ```
+   
+   - [ ] Initiate test sequence
+   - [ ] Monitor test progress on display
+   - [ ] Watch for any error messages or warnings
+   - [ ] Allow test to complete without interruption
+   
+3. **Test Results Review**
+   - [ ] Review all test measurements against specifications
+   - [ ] Check pass/fail status for each test parameter
+   - [ ] Verify data completeness and quality
+   - [ ] Save test results to appropriate database/file system
+
+#### Batch Testing Procedures
+
+For high-volume production testing:
+
+```bash
+#!/bin/bash
+# Batch testing script
+for device in DEVICE_{001..100}; do
+    echo "Testing $device..."
+    mechatronic_test_system --test $device
+    sleep 2  # Brief pause between tests
+done
+```
+
+1. **Batch Setup**
+   - [ ] Load batch testing configuration
+   - [ ] Verify device queue and sequence
+   - [ ] Set up automatic result logging
+   - [ ] Configure alert thresholds for batch monitoring
+
+2. **Monitoring During Batch**
+   - [ ] Monitor overall batch progress
+   - [ ] Watch for recurring failures or trends
+   - [ ] Intervene if failure rate exceeds thresholds
+   - [ ] Maintain test environment stability
 3. Configure test sequence parameters
 4. Start batch operation
 5. Monitor progress on status display

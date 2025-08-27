@@ -14,6 +14,8 @@
 
 ## System Architecture
 
+![System Architecture Diagram](../images/architecture/system_architecture.png)
+
 ### Overview
 The Automated Mechatronic Test Inspection System follows a modular architecture with the following key components:
 
@@ -34,9 +36,11 @@ The Automated Mechatronic Test Inspection System follows a modular architecture 
 
 ### Design Principles
 - **Modularity**: Each component is independently testable and replaceable
-- **Scalability**: System can be extended to support additional devices and interfaces
+- **Scalability**: System can be extended to support additional devices and interfaces  
 - **Reliability**: Comprehensive error handling and recovery mechanisms
 - **Performance**: Optimized for high-throughput testing scenarios
+
+![Build Process Overview](../images/build/build_process.png)
 
 ---
 

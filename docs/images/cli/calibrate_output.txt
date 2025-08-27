@@ -1,0 +1,18 @@
+=== Automated Mechatronic Test Inspection System ===
+Version 1.0.0
+Copyright 2024 - Mechatronic Test System Team
+
+Initializing equipment controller...
+Port: /dev/ttyUSB0
+Baud Rate: 115200
+[STATUS] IDLE: Equipment initialized (simulation mode)
+Error: Failed to initialize equipment controller: Failed to connect to device on port /dev/ttyUSB0
+Note: This is expected if no hardware is connected. Continuing in simulation mode.
+
+=== Equipment Calibration ===
+[STATUS] MAINTENANCE: Calibration in progress
+[STATUS] ERROR: Calibration failed
+Calibration failed: Failed to connect to device on port /dev/ttyUSB0
+
+Shutting down...
+[STATUS] IDLE: Equipment stopped
