@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "total_tests": 9,
+    "passed": 3,
+    "failed": 6,
+    "pass_rate": 33.33333333333333,
+    "generated_at": "2025-08-27 18:51:35"
+  },
+  "device_statistics": {
+    "device_001": {
+      "total_tests": 3,
+      "passed": 1,
+      "failed": 2,
+      "pass_rate": 33.33333333333333,
+      "avg_measurement": 5.009110406842983
+    },
+    "device_002": {
+      "total_tests": 3,
+      "passed": 1,
+      "failed": 2,
+      "pass_rate": 33.33333333333333,
+      "avg_measurement": 5.021818533797519
+    },
+    "device_003": {
+      "total_tests": 3,
+      "passed": 1,
+      "failed": 2,
+      "pass_rate": 33.33333333333333,
+      "avg_measurement": 4.920310384173244
+    }
+  },
+  "detailed_results": [
+    {
+      "test_id": "TEST_1756320694",
+      "device_id": "device_001",
+      "passed": true,
+      "measurement_value": 4.967528152650637,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:34",
+      "notes": "Test: Voltage Test. Simulation mode test completed"
+    },
+    {
+      "test_id": "TEST_1756320694",
+      "device_id": "device_001",
+      "passed": false,
+      "measurement_value": 5.058702599073706,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:34",
+      "notes": "Test: Current Test. Simulation mode test completed (Outside expected range: 0.08-0.12)"
+    },
+    {
+      "test_id": "TEST_1756320694",
+      "device_id": "device_001",
+      "passed": false,
+      "measurement_value": 5.001100468804607,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:34",
+      "notes": "Test: Resistance Test. Simulation mode test completed (Outside expected range: 950-1050)"
+    },
+    {
+      "test_id": "TEST_1756320694",
+      "device_id": "device_002",
+      "passed": true,
+      "measurement_value": 4.9118275959944135,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:34",
+      "notes": "Test: Voltage Test. Simulation mode test completed"
+    },
+    {
+      "test_id": "TEST_1756320694",
+      "device_id": "device_002",
+      "passed": false,
+      "measurement_value": 5.12408297960371,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:34",
+      "notes": "Test: Current Test. Simulation mode test completed (Outside expected range: 0.08-0.12)"
+    },
+    {
+      "test_id": "TEST_1756320694",
+      "device_id": "device_002",
+      "passed": false,
+      "measurement_value": 5.029545025794435,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:34",
+      "notes": "Test: Resistance Test. Simulation mode test completed (Outside expected range: 950-1050)"
+    },
+    {
+      "test_id": "TEST_1756320695",
+      "device_id": "device_003",
+      "passed": true,
+      "measurement_value": 5.042156543305034,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:35",
+      "notes": "Test: Voltage Test. Simulation mode test completed"
+    },
+    {
+      "test_id": "TEST_1756320695",
+      "device_id": "device_003",
+      "passed": false,
+      "measurement_value": 4.99399626389364,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:35",
+      "notes": "Test: Current Test. Simulation mode test completed (Outside expected range: 0.08-0.12)"
+    },
+    {
+      "test_id": "TEST_1756320695",
+      "device_id": "device_003",
+      "passed": false,
+      "measurement_value": 4.724778345321058,
+      "units": "V",
+      "timestamp": "2025-08-27 18:51:35",
+      "notes": "Test: Resistance Test. Simulation mode test completed"
+    }
+  ]
+}
