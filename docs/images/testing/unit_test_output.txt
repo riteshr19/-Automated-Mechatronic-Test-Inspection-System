@@ -1,0 +1,19 @@
+=== Automated Mechatronic Test System - Unit Tests ===
+Running basic functionality tests...
+
+Running test: Equipment Controller Creation ... PASS
+Running test: Equipment Controller Status ... PASS
+Running test: Equipment Configuration ... PASS
+Running test: Equipment State Transitions ... PASS
+Running test: Test Execution Interface ... PASS
+Running test: Health Metrics ... PASS
+Running test: Hardware Interface Creation ... PASS
+Running test: Calibration Interface ... PASS
+Running test: Status Callback ... PASS
+Running test: Error Handling ... PASS
+
+=== Test Summary ===
+Tests run: 10
+Passed: 10
+Failed: 0
+Success rate: 100%

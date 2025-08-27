@@ -1,0 +1,13 @@
+=== Automated Mechatronic Test Inspection System ===
+Version 1.0.0
+Copyright 2024 - Mechatronic Test System Team
+
+Automated Mechatronic Test Inspection System
+Usage: mechatronic_test_system [options]
+Options:
+  -p, --port <port>     Serial port (default: COM1 on Windows, /dev/ttyUSB0 on Linux)
+  -b, --baud <rate>     Baud rate (default: 115200)
+  -t, --test <device>   Run test on specified device
+  -c, --calibrate       Perform equipment calibration
+  -s, --status          Show equipment status
+  -h, --help            Show this help message
