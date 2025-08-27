@@ -1,0 +1,22 @@
+# Equipment Configuration
+device_port: "/dev/ttyUSB0"  # Change to "COM1" on Windows
+baud_rate: 115200
+measurement_tolerance: 0.1
+max_retry_attempts: 3
+enable_logging: true
+log_file_path: "mechatronic_test.log"
+
+# Test Configuration
+test_timeout_seconds: 30
+calibration_timeout_seconds: 60
+simulation_mode: false
+
+# Health Monitoring
+health_check_interval_seconds: 300
+temperature_warning_threshold: 70.0
+vibration_warning_threshold: 0.1
+
+# Data Storage
+results_directory: "test_results"
+backup_enabled: true
+max_result_files: 1000

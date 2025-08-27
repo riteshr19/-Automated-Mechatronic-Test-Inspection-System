@@ -1,0 +1,94 @@
+# Build outputs
+build/
+bin/
+obj/
+out/
+target/
+dist/
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# IDE and editor files
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Language specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+node_modules/
+*.o
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.map
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Package managers
+packages/
+.nuget/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage.xml
+nosetests.xml
+junit.xml
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# LabVIEW files
+*.lvlps
+*.aliases
+*.lvproj.user
+
+# MATLAB files
+*.asv
+*.m~
+
+# Configuration files (keep templates)
+config.ini
+settings.json
+!config.template.ini
+!settings.template.json
